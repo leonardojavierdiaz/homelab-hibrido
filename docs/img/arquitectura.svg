@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1010" viewBox="0 0 1680 1010" font-family="Inter, DejaVu Sans, sans-serif">
+  <defs>
+    <marker id="aBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker>
+    <marker id="aGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker>
+    <marker id="aOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker>
+    <marker id="aGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+  </defs>
+
+  <rect width="1680" height="1010" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="30" y="58" font-size="34" font-weight="800" fill="#12305a">Homelab híbrido: on-premise + Azure</text>
+  <text x="30" y="92" font-size="19" fill="#475569">Virtualización, monitoreo, Active Directory y WSUS · construido a mano y documentado como código</text>
+
+  <!-- Equipo de administración -->
+  <rect x="30" y="470" width="170" height="110" rx="12" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="115" y="510" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">Equipo de</text>
+  <text x="115" y="530" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">administración</text>
+  <text x="115" y="556" font-size="13" fill="#475569" text-anchor="middle">navegador y RDP</text>
+
+  <!-- ===== Mac / UTM / Proxmox ===== -->
+  <rect x="240" y="130" width="640" height="640" rx="16" fill="#f8fafc" stroke="#475569" stroke-width="2.5"/>
+  <text x="262" y="164" font-size="19" font-weight="800" fill="#1e293b">MacBook Pro M3 · ARM · 8 GB RAM</text>
+
+  <rect x="260" y="182" width="600" height="570" rx="14" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="280" y="212" font-size="16" font-weight="700" fill="#334155">UTM · Apple Virtualization</text>
+
+  <rect x="280" y="226" width="560" height="508" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+  <text x="300" y="256" font-size="18" font-weight="800" fill="#c2410c">Proxmox VE 9 arm64</text>
+  <text x="300" y="277" font-size="14" fill="#9a3412">Hipervisor KVM con virtualización anidada</text>
+
+  <!-- Contenedor LXC -->
+  <rect x="300" y="292" width="330" height="424" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="320" y="320" font-size="16" font-weight="800" fill="#15803d">Contenedor LXC · Debian 13 arm64</text>
+
+  <rect x="320" y="338" width="290" height="68" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="338" y="366" font-size="16" font-weight="700" fill="#0f172a">Zabbix Server 7.0 LTS</text>
+  <text x="338" y="389" font-size="13" fill="#475569">Recolección, triggers y alertas</text>
+
+  <rect x="320" y="420" width="290" height="68" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="338" y="448" font-size="16" font-weight="700" fill="#0f172a">PostgreSQL</text>
+  <text x="338" y="471" font-size="13" fill="#475569">Base de datos de Zabbix</text>
+
+  <rect x="320" y="502" width="290" height="68" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="338" y="530" font-size="16" font-weight="700" fill="#0f172a">Apache + frontend</text>
+  <text x="338" y="553" font-size="13" fill="#475569">Interfaz web de Zabbix</text>
+
+  <rect x="320" y="584" width="290" height="68" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="338" y="612" font-size="16" font-weight="700" fill="#0f172a">Zabbix Agent</text>
+  <text x="338" y="635" font-size="13" fill="#475569">CPU, memoria, disco y red del contenedor</text>
+
+  <text x="320" y="688" font-size="13" fill="#166534">Repositorio de Zabbix para arm64; el script</text>
+  <text x="320" y="706" font-size="13" fill="#166534">contempla lo que falta en un Debian mínimo</text>
+
+  <!-- Agente local → servidor -->
+  <path d="M320,618 H308 V372 H316" fill="none" stroke="#15803d" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aGreen)"/>
+
+  <!-- API de Proxmox -->
+  <rect x="650" y="292" width="172" height="190" rx="12" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+  <text x="664" y="320" font-size="15" font-weight="800" fill="#c2410c">API de Proxmox</text>
+  <text x="664" y="344" font-size="13" fill="#334155">HTTPS · puerto 8006</text>
+  <text x="664" y="372" font-size="13" font-weight="700" fill="#0f172a">Token</text>
+  <text x="664" y="390" font-size="12.5" fill="#334155">root@pam!zabbix</text>
+  <text x="664" y="416" font-size="13" font-weight="700" fill="#0f172a">Rol PVEAuditor</text>
+  <text x="664" y="434" font-size="12.5" fill="#334155">solo lectura</text>
+  <text x="664" y="460" font-size="12" fill="#64748b">Template: Proxmox VE</text>
+  <text x="664" y="476" font-size="12" fill="#64748b">by HTTP</text>
+
+  <!-- Zabbix → API -->
+  <path d="M610,372 H646" fill="none" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aBlue)"/>
+
+  <!-- Operación -->
+  <rect x="650" y="498" width="172" height="218" rx="12" fill="#ffffff" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="664" y="526" font-size="15" font-weight="800" fill="#c2410c">Operación probada</text>
+  <text x="664" y="554" font-size="13" fill="#334155">• Snapshot y rollback</text>
+  <text x="664" y="580" font-size="13" fill="#334155">• Backup y restore</text>
+  <text x="676" y="598" font-size="13" fill="#334155">con vzdump</text>
+  <text x="664" y="624" font-size="13" fill="#334155">• Template LXC</text>
+  <text x="676" y="642" font-size="13" fill="#334155">subido a mano</text>
+  <text x="664" y="668" font-size="13" fill="#334155">• Troubleshooting</text>
+  <text x="676" y="686" font-size="13" fill="#334155">Linux: disco, lsof,</text>
+  <text x="676" y="704" font-size="13" fill="#334155">nginx, ss, top</text>
+
+  <!-- Admin → Zabbix UI -->
+  <path d="M200,536 H316" fill="none" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#aBlue)"/>
+  <text x="216" y="526" font-size="12.5" font-weight="700" fill="#1d4ed8">HTTP</text>
+
+  <!-- Separación -->
+  <line x1="910" y1="140" x2="910" y2="760" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 6"/>
+  <text x="922" y="450" font-size="13" fill="#64748b" transform="rotate(-90 922 450)" text-anchor="middle">Entornos independientes · sin conexión entre la Mac y Azure</text>
+
+  <!-- ===== Azure ===== -->
+  <rect x="940" y="130" width="560" height="640" rx="16" fill="#eff6ff" stroke="#0f6cbd" stroke-width="2.5"/>
+  <text x="962" y="164" font-size="19" font-weight="800" fill="#0f4c8a">Microsoft Azure · Chile Central</text>
+
+  <rect x="960" y="182" width="520" height="52" rx="10" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="980" y="214" font-size="15" fill="#713f12"><tspan font-weight="800">Budget + alertas</tspan> · creado antes que cualquier recurso</text>
+
+  <rect x="960" y="250" width="520" height="502" rx="12" fill="#ffffff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="980" y="278" font-size="15" font-weight="700" fill="#1e40af">VNet · DNS custom → 172.16.0.4 (el DC)</text>
+
+  <rect x="980" y="294" width="480" height="440" rx="12" fill="#f8fbff" stroke="#1e40af" stroke-width="2"/>
+  <text x="1000" y="322" font-size="16" font-weight="800" fill="#1e3a8a">VM AD001 · Windows Server 2025</text>
+  <text x="1000" y="342" font-size="13" fill="#475569">B2ls_v2 · IP privada estática · se apaga al terminar</text>
+
+  <rect x="1000" y="356" width="440" height="116" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="1018" y="384" font-size="16" font-weight="700" fill="#0f172a">Active Directory · dominio lab.local</text>
+  <text x="1018" y="408" font-size="13" fill="#334155">• OU, usuarios y grupos de seguridad</text>
+  <text x="1018" y="430" font-size="13" fill="#334155">• GPO vinculadas a las OU</text>
+  <text x="1018" y="452" font-size="13" fill="#334155">• Salud: dcdiag, netdom query fsmo, repadmin, w32tm</text>
+
+  <rect x="1000" y="484" width="440" height="66" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="1018" y="512" font-size="16" font-weight="700" fill="#0f172a">DNS integrado</text>
+  <text x="1018" y="535" font-size="13" fill="#334155">Reenviador al DNS de Azure</text>
+
+  <rect x="1000" y="562" width="440" height="156" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="1018" y="590" font-size="16" font-weight="700" fill="#0f172a">WSUS · contenido en C:\WSUS</text>
+  <text x="1018" y="614" font-size="13" fill="#334155">• Producto: Microsoft Server Operating System-24H2</text>
+  <text x="1018" y="636" font-size="13" fill="#334155">• Grupos Piloto y Produccion (despliegue por anillos)</text>
+  <text x="1018" y="658" font-size="13" fill="#334155">• GPO WSUS-Config con client-side targeting</text>
+  <text x="1018" y="684" font-size="13" font-weight="700" fill="#15803d">✓ AD001 se registró solo en Piloto:</text>
+  <text x="1030" y="704" font-size="13" font-weight="700" fill="#15803d">100% instalado / no aplicable</text>
+
+  <!-- DNS de Azure -->
+  <rect x="1530" y="478" width="130" height="78" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="1595" y="506" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">DNS de Azure</text>
+  <text x="1595" y="530" font-size="12.5" fill="#475569" text-anchor="middle">168.63.129.16</text>
+  <path d="M1440,517 H1526" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#aGray)"/>
+
+  <!-- Microsoft Update -->
+  <rect x="1530" y="600" width="130" height="78" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="1595" y="628" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">Microsoft</text>
+  <text x="1595" y="646" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">Update</text>
+  <text x="1595" y="666" font-size="12" fill="#9a3412" text-anchor="middle">origen de parches</text>
+  <path d="M1530,639 H1444" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aOrange)"/>
+
+  <!-- RDP -->
+  <path d="M115,580 V812 H1220 V738" fill="none" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#aBlue)"/>
+  <text x="560" y="804" font-size="12.5" font-weight="700" fill="#1d4ed8">RDP · administración del controlador de dominio</text>
+
+  <!-- ===== Referencias y notas ===== -->
+  <rect x="30" y="846" width="760" height="140" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="50" y="876" font-size="16" font-weight="800" fill="#12305a">Referencias</text>
+  <line x1="50" y1="904" x2="100" y2="904" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#aBlue)"/>
+  <text x="112" y="909" font-size="13.5" fill="#334155">Acceso de administración (HTTP y RDP)</text>
+  <line x1="50" y1="934" x2="100" y2="934" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aBlue)"/>
+  <text x="112" y="939" font-size="13.5" fill="#334155">Monitoreo por API (solo lectura)</text>
+  <line x1="50" y1="964" x2="100" y2="964" stroke="#15803d" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aGreen)"/>
+  <text x="112" y="969" font-size="13.5" fill="#334155">Agente Zabbix local</text>
+  <line x1="420" y1="904" x2="470" y2="904" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aOrange)"/>
+  <text x="482" y="909" font-size="13.5" fill="#334155">Sincronización de actualizaciones</text>
+  <line x1="420" y1="934" x2="470" y2="934" stroke="#475569" stroke-width="2.5" marker-end="url(#aGray)"/>
+  <text x="482" y="939" font-size="13.5" fill="#334155">Reenvío de DNS</text>
+
+  <rect x="820" y="846" width="840" height="140" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="840" y="876" font-size="16" font-weight="800" fill="#12305a">Notas</text>
+  <text x="840" y="906" font-size="13.5" fill="#334155">• Armado a mano para entender cada pieza; los scripts para reproducirlo están en /scripts.</text>
+  <text x="840" y="934" font-size="13.5" fill="#334155">• Mínimo privilegio (token de solo lectura) y control de costos (budget) desde el inicio.</text>
+  <text x="840" y="962" font-size="13.5" fill="#334155">• Próximo paso: Terraform, Ansible y GitHub Actions; parcheo con Azure Update Manager y Azure Arc.</text>
+</svg>
